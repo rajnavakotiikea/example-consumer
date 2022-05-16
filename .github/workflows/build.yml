@@ -12,6 +12,14 @@ env:
   GIT_REF: ${{ github.ref }}
 
 jobs:
+  create-webhooks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: create token
+        run: make create_github_token_secret
+      - name: create or update git commit status webhook
+        run: make create_or_update_github_commit_status_webhook
+
   test:
     runs-on: ubuntu-latest
     strategy:
