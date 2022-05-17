@@ -1,0 +1,21 @@
+name: Post merge jobs
+
+on:
+  pull_request:
+    branches: [ master ]
+    types: [ closed ]
+
+
+jobs:
+  record-pact-merge-to-main:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+    name: record pact merge
+    steps:
+      - name: run record pact merge composite action
+        uses: ingka-group-digital/dsm-workflows/actions/record_pact_deployment@pact-contract-test-composite-actions
+        with:
+          pact_broker_base_url: https://sampleautoamtiontestraj.pactflow.io
+          pact_broker_token: GglUlzHa8Egn_fpkhzZQLw
+          pacticipant: pactflow-example-consumer-3
+          git_commit: ${{ github.sha }}
