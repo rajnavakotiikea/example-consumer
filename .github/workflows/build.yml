@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: webhook
         uses: rajnavakotiikea/pact-command-execution@main
+        with:
+          github_access_token : ${{ secrets.ACCESS_TOKEN }}
 
 #      - name: Publish pact
 #        uses: ingka-group-digital/dsm-workflows/actions/publish_contract@pact-contract-test-composite-actions
