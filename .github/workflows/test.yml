@@ -1,0 +1,12 @@
+name: Test pipeline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-pact-webhook:
+    runs-on: ubuntu-latest
+    name: create webhook
+    steps:
+      - name: webhook
+        uses: rajnavakotiikea/pact-command-execution@main
