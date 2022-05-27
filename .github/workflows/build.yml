@@ -20,10 +20,12 @@ jobs:
         uses: rajnavakotiikea/pact-command-execution@main
         with:
           action: delete
-          webhhook_type: trigger_job
+          webhook_type: trigger_job
           organization: rajnavakotiikea
           repository: example-consumer
-          github-personal-access-token : ${{ secrets.ACCESS_TOKEN }}
+          github_personal_access_token : ${{ secrets.ACCESS_TOKEN }}
+          broker_base_url: tests123
+          broker_token: token123
 
 #      - name: Publish pact
 #        uses: ingka-group-digital/dsm-workflows/actions/publish_contract@pact-contract-test-composite-actions
