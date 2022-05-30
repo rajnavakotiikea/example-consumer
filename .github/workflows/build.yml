@@ -27,9 +27,9 @@ jobs:
           broker_base_url: https://sampleautoamtiontestraj.pactflow.io
           broker_token: GglUlzHa8Egn_fpkhzZQLw
           consumer: pact-example-consumer
-          consumer_label: pact-example-consumer-label
+#          consumer_label: pact-example-consumer-label
           provider: pact-example-provider
-          provider_label: pact-example-provider-label
+#          provider_label: pact-example-provider-label
           contract_content_changed: true
 #          no_contract_content_changed: true
           contract_published: true
