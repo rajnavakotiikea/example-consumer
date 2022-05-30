@@ -26,6 +26,10 @@ jobs:
           github_personal_access_token : ${{ secrets.ACCESS_TOKEN }}
           broker_base_url: tests123
           broker_token: token123
+          consumer: pact-example-consumer
+          consumer_label: pact-example-consumer-label
+          provider: pact-example-provider
+          provider_label: pact-example-provider-label
 
 #      - name: Publish pact
 #        uses: ingka-group-digital/dsm-workflows/actions/publish_contract@pact-contract-test-composite-actions
