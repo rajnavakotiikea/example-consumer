@@ -26,9 +26,9 @@ jobs:
           github_personal_access_token : ${{ secrets.ACCESS_TOKEN }}
           broker_base_url: https://sampleautoamtiontestraj.pactflow.io
           broker_token: GglUlzHa8Egn_fpkhzZQLw
-          consumer: pact-example-consumer
+          consumer: pactflow-example-consumer
 #          consumer_label: pact-example-consumer-label
-          provider: pact-example-provider
+          provider: pactflow-example-provider
 #          provider_label: pact-example-provider-label
           contract_content_changed: true
 #          no_contract_content_changed: true
