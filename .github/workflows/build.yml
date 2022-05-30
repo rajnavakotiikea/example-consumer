@@ -30,6 +30,19 @@ jobs:
           consumer_label: pact-example-consumer-label
           provider: pact-example-provider
           provider_label: pact-example-provider-label
+          contract_content_changed: true
+          no_contract_content_changed: true
+          contract_published: true
+          no_contract_published: true
+          provider_verification_published: true
+          no_provider_verification_published: true
+          provider_verification_failed: true
+          no_provider_verification_failed: true
+          provider_verification_succeeded: true
+          no_provider_verification_succeeded: true
+          contract_requiring_verification_published: true
+          no_contract_requiring_verification_published: true
+
 
 #      - name: Publish pact
 #        uses: ingka-group-digital/dsm-workflows/actions/publish_contract@pact-contract-test-composite-actions
