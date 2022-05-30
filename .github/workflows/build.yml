@@ -20,7 +20,7 @@ jobs:
         uses: rajnavakotiikea/pact-command-execution@main
         with:
           action: delete
-          webhook_type: trigger_job
+          webhook_type: trigger_provider_job
           organization: rajnavakotiikea
           repository: example-consumer
           github_personal_access_token : ${{ secrets.ACCESS_TOKEN }}
