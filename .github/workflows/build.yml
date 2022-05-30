@@ -22,7 +22,7 @@ jobs:
           action: create
           webhook_type: trigger_provider_job
           organization: rajnavakotiikea
-          repository: example-consumer
+          repository: example-provider
           github_personal_access_token : ${{ secrets.ACCESS_TOKEN }}
           broker_base_url: https://sampleautoamtiontestraj.pactflow.io
           broker_token: GglUlzHa8Egn_fpkhzZQLw
@@ -31,17 +31,17 @@ jobs:
           provider: pact-example-provider
           provider_label: pact-example-provider-label
           contract_content_changed: true
-          no_contract_content_changed: true
+#          no_contract_content_changed: true
           contract_published: true
-          no_contract_published: true
-          provider_verification_published: true
-          no_provider_verification_published: true
-          provider_verification_failed: true
-          no_provider_verification_failed: true
-          provider_verification_succeeded: true
-          no_provider_verification_succeeded: true
-          contract_requiring_verification_published: true
-          no_contract_requiring_verification_published: true
+#          no_contract_published: true
+#          provider_verification_published: true
+#          no_provider_verification_published: true
+#          provider_verification_failed: true
+#          no_provider_verification_failed: true
+#          provider_verification_succeeded: true
+#          no_provider_verification_succeeded: true
+#          contract_requiring_verification_published: true
+#          no_contract_requiring_verification_published: true
 
 
 #      - name: Publish pact
