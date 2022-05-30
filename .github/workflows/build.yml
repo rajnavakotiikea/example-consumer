@@ -24,8 +24,8 @@ jobs:
           organization: rajnavakotiikea
           repository: example-consumer
           github_personal_access_token : ${{ secrets.ACCESS_TOKEN }}
-          broker_base_url: tests123
-          broker_token: token123
+          broker_base_url: https://sampleautoamtiontestraj.pactflow.io
+          broker_token: GglUlzHa8Egn_fpkhzZQLw
           consumer: pact-example-consumer
           consumer_label: pact-example-consumer-label
           provider: pact-example-provider
