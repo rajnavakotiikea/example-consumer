@@ -16,9 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Publish pacts
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
       - name: pacts
         uses: rajnavakotiikea/publish-pacts@main
         with:
