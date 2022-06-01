@@ -21,7 +21,7 @@ jobs:
       - name: pacts
         uses: rajnavakotiikea/publish-pacts@main
         with:
-          pact_file_dir: /pacts
+          pact_file_dir: pacts
           consumer_app_version: ${{ github.sha }}
           tag: ${{ github.ref_name }}
           broker_base_url: https://sampleautoamtiontestraj.pactflow.io
