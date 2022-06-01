@@ -16,21 +16,35 @@ jobs:
     runs-on: ubuntu-latest
     name: Publish pacts
     steps:
-      - name: webhook
-        uses: rajnavakotiikea/pact-command-execution@main
+      - name: pacts
+        uses: rajnavakotiikea/publish-pacts@main
         with:
-          action: create
-          webhook_type: consumer_commit_status
-          description: git commit status webhook for pactflow-example-consumer
-          organization: rajnavakotiikea
-          repository: example-provider
-          github_personal_access_token : ${{ secrets.ACCESS_TOKEN }}
+          pact_file_dir: ${PWD}/pacts
+          consumer_app_version: ${{ github.sha }}
+          tag: ${{ github.ref_name }}
           broker_base_url: https://sampleautoamtiontestraj.pactflow.io
           broker_token: GglUlzHa8Egn_fpkhzZQLw
-          consumer: pactflow-example-consumer
-          provider: pactflow-example-provider
-          contract_content_changed: true
-          contract_published: true
+
+
+#  publish-to-pact-flow:
+#    runs-on: ubuntu-latest
+#    name: Publish pacts
+#    steps:
+#      - name: webhook
+#        uses: rajnavakotiikea/pact-command-execution@main
+#        with:
+#          action: create
+#          webhook_type: consumer_commit_status
+#          description: git commit status webhook for pactflow-example-consumer
+#          organization: rajnavakotiikea
+#          repository: example-provider
+#          github_personal_access_token : ${{ secrets.ACCESS_TOKEN }}
+#          broker_base_url: https://sampleautoamtiontestraj.pactflow.io
+#          broker_token: GglUlzHa8Egn_fpkhzZQLw
+#          consumer: pactflow-example-consumer
+#          provider: pactflow-example-provider
+#          contract_content_changed: true
+#          contract_published: true
 
 #          no_contract_content_changed: true
 #          provider_label: pact-example-provider-label
