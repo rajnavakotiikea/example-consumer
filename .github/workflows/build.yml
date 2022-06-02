@@ -17,13 +17,11 @@ jobs:
     name: Publish pacts
     steps:
       - name: pacts
-        uses: rajnavakotiikea/publish-pacts@main
+        uses: rajnavakotiikea/pact-create-environment@main
         with:
-          pact_file_dir: ${PWD}/pacts
-          consumer_app_version: ${{ github.sha }}
-          tag: ${{ github.ref_name }}
-          broker_base_url: https://sampleautoamtiontestraj.pactflow.io
-          broker_token: GglUlzHa8Egn_fpkhzZQLw
+          name: dev-env
+          display_name: dev
+          production: false
 
 
 #  publish-to-pact-flow:
