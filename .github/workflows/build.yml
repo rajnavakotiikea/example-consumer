@@ -22,6 +22,8 @@ jobs:
           name: dev-env
           display_name: dev
           production: false
+          broker_token: GglUlzHa8Egn_fpkhzZQLw
+          broker_base_url: https://sampleautoamtiontestraj.pactflow.io
 
 
 #  publish-to-pact-flow:
