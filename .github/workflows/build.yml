@@ -19,9 +19,9 @@ jobs:
       - name: pacts
         uses: rajnavakotiikea/pact-create-environment@main
         with:
-          name: dev-env
-          display_name: dev
-          production: false
+          name: stage-env
+          display_name: stage
+          is_production: false
           broker_token: GglUlzHa8Egn_fpkhzZQLw
           broker_base_url: https://sampleautoamtiontestraj.pactflow.io
 
